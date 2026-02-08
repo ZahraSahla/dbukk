@@ -86,7 +86,7 @@ CREATE TABLE `alat` (
   `stok` int DEFAULT '0',
   `harga_per_hari` decimal(10,2) DEFAULT '0.00',
   `foto` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `alat`
@@ -104,7 +104,7 @@ INSERT INTO `alat` (`id_alat`, `id_kategori`, `nama_alat`, `merk`, `stok`, `harg
 CREATE TABLE `kategori` (
   `id_kategori` int NOT NULL,
   `nama_kategori` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kategori`
@@ -124,7 +124,7 @@ CREATE TABLE `log_aktivitas` (
   `id_user` int DEFAULT NULL,
   `aktivitas` text,
   `waktu` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `log_aktivitas`
@@ -154,7 +154,7 @@ CREATE TABLE `peminjaman` (
   `tgl_pengembalian_aktual` date DEFAULT NULL,
   `denda` decimal(10,2) DEFAULT '0.00',
   `status` enum('pending','dipinjam','kembali','ditolak') DEFAULT 'pending'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `peminjaman`
@@ -178,7 +178,7 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `nama_lengkap` varchar(100) DEFAULT NULL,
   `role` enum('admin','petugas','peminjam') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
